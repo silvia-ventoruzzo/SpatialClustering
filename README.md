@@ -4,6 +4,9 @@ This repository contains functions for spatial clustering. In particular, it is 
 1. **spatial**: for spatial data
 2. **spatiotemporal**: for spatio-temporal data
 
+## Description
+The final goal of this project is creating a Python library for spatial clustering.
+
 ## Content
 
 The included classes perform following clustering algorithms:
