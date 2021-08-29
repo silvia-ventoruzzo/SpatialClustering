@@ -119,12 +119,12 @@ class ClustGeo(BaseEstimator, ClusterMixin):
         ########################################
         # Calculation of dissimilarity measure #
         ########################################
+        if scale:
+            #Normalized dissimilarity matrices 
+            D0 = D0/D0.to_numpy().max()
+            D1 = D1/D1.to_numpy().max()  
         delta0 = ward_aggr(D0, wt=wt)
-        if D1 is not None:
-            if scale:
-                #Normalized dissimilarity matrices 
-                D0 = D0/D0.to_numpy().max()
-                D1 = D1/D1.to_numpy().max()       
+        if D1 is not None:     
             delta1 = ward_aggr(D1, wt=wt)
         else:
             delta1 = 0
